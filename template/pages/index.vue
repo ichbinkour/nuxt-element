@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>
-      {{ name }}
+      Welcome to your Nuxt.js + ElementUI App
     </h1>
     <p>Checkout these links to get you started:</p>
     <div>
