@@ -1,8 +1,8 @@
-# Starter
+# Nuxt.js + ElementUI
 
-A [Nuxt.js](https://github.com/nuxt/nuxt.js) starter project template without the distraction of a complicated development environment.
+A [Nuxt.js](https://github.com/nuxt/nuxt.js) and [ElementUI](https://github.com/ElemeFE/element) starter project template.
 
-Live demo: https://starter.nuxtjs.org
+This template follows best practices to include ElementUI in Nuxt.js. You get an easily customizable ElementUI theme and on-demand component import.
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ Make sure to have `node 8.0+` and `npm 5.0+` installed
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
 
 ``` bash
-$ vue init nuxt-community/starter-template my-project  
+$ vue init visualjerk/nuxt-element my-project  
 $ cd my-project                     
 # install dependencies
 $ npm install # Or yarn install
