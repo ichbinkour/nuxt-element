@@ -30,7 +30,7 @@ import { Dialog } from 'element-ui'
 
 export default {
   components: {
-    'el-dialog': Dialog
+    ElDialog: Dialog
   },
   data() {
     return {

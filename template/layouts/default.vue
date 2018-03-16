@@ -1,52 +1,78 @@
 <template>
-  <div>
-    <nuxt/>
+  <div class="app-wrapper">
+    <el-container>
+      <el-header class="app-header">
+        <div class="app-logo" @click="$router.push('/')">
+          {{ name }}
+        </div>
+        <el-menu
+          class="app-menu"
+          mode="horizontal"
+          :router="true"
+          :default-active="$route.path">
+          <el-menu-item index="/" :route="{ path: '/' }">
+            Start
+          </el-menu-item>
+          <el-menu-item index="/playground" :route="{ path: '/playground' }">
+            Playground
+          </el-menu-item>
+        </el-menu>
+      </el-header>
+      <el-main>
+        <nuxt/>
+      </el-main>
+    </el-container>
   </div>
 </template>
 
-<style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<script>
+// Import components on demand
+import { Container, Header, Main, Menu, MenuItem } from 'element-ui'
 
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
+export default {
+  components: {
+    ElContainer: Container,
+    ElHeader: Header,
+    ElMain: Main,
+    ElMenu: Menu,
+    ElMenuItem: MenuItem
+  },
+  data() {
+    return {
+      dialogVisible: false
+    }
+  }
 }
+</script>
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+<style lang="scss" scoped>
+  @import "~assets/scss/variables.scss";
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+  .app-wrapper {
+    margin: 0 auto;
+  }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+  .app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $--background-color-base;
+  }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+  .app-logo {
+    cursor: pointer;
+    font-weight: bold;
+    color: $--color-primary;
+  }
+
+  .app-menu {
+    background-color: $--background-color-base;
+    border-bottom: none;
+
+    .el-menu-item {
+      &:hover, &.is-active {
+        background-color: $--background-color-base;
+      }
+    }
+  }
 </style>

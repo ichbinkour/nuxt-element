@@ -3,12 +3,12 @@
     <h1>
       {{ name }}
     </h1>
-    <h2>
-      {{ description }}
-    </h2>
+    <p>Checkout these links to get you started:</p>
     <div>
       <el-button
-        href="/playground">Playground</el-button>
+        type="primary"
+        icon="el-icon-view"
+        @click="$router.push('/playground')">Playground</el-button>
       <el-button
         href="https://nuxtjs.org/"
         target="_blank">Nuxt Documentation</el-button>
