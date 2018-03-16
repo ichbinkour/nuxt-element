@@ -1,4 +1,5 @@
 import Vue from 'vue'
+
 // Import global components
 import { Button, Select } from 'element-ui'
 

@@ -29,18 +29,6 @@ module.exports = {
   */
   build: {
     /*
-    ** Babel settings
-     */
-    babel: {
-      'plugins': [
-        ['component', [{
-          'libraryName': 'element-ui',
-          'styleLibraryName': 'theme-chalk'
-        }]]
-      ],
-      'comments': false
-    },
-    /*
     ** Run ESLint on save
     */
     extend (config, {isDev, isClient}) {
