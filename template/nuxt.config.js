@@ -22,7 +22,7 @@ module.exports = {
   */
   css: [
     // Main scss importing element-io
-    '@/assets/css/main.scss'
+    '@/assets/scss/main.scss'
   ],
   /*
   ** Build configuration
@@ -31,15 +31,15 @@ module.exports = {
     /*
     ** Babel settings
      */
-    'plugins': [
-      [
-        'component',
-        {
+    babel: {
+      'plugins': [
+        ['component', [{
           'libraryName': 'element-ui',
           'styleLibraryName': 'theme-chalk'
-        }
-      ]
-    ],
+        }]]
+      ],
+      'comments': false
+    },
     /*
     ** Run ESLint on save
     */
