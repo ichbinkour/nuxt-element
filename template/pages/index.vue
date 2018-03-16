@@ -8,18 +8,29 @@
       <el-button
         type="primary"
         icon="el-icon-view"
-        @click="$router.push('/playground')">Playground</el-button>
+        @click="$router.push('/playground')">
+        Playground
+      </el-button>
       <el-button
-        href="https://nuxtjs.org/"
-        target="_blank">Nuxt Documentation</el-button>
+        @click="openUrl('https://nuxtjs.org/')">
+        Nuxt Documentation
+      </el-button>
       <el-button
-        href="http://element.eleme.io/"
-        target="_blank">Element UI Documentation</el-button>
+        @click="openUrl('http://element.eleme.io/')">
+        Element UI Documentation
+      </el-button>
     </div>
   </div>
 </template>
 
 <script>
+  export default {
+    methods: {
+      openUrl (url) {
+        window.open(url)
+      }
+    }
+  }
 </script>
 
 <style>
